@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PELOTÃO DE MANUTENÇÃO E TRANSPORTE - SISTEMA DE CONTROLE DE INFORMAÇÕES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden; /* Para evitar barras de rolagem na tela */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            height: calc(100vh - 40px); /* Altura para permitir rolagem */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative; 
+            z-index: 2; 
+            overflow-y: auto; /* Permite rolagem vertical */
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #8fbc8f;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-decoration: none; 
+            transition: background-color 0.3s;
+        }
+
+        .box:hover {
+            background-color: #6a9c6a; 
+        }
+
+        .armored .box {
+            background-color: #4682b4;
+        }
+
+        .armored .box:hover {
+            background-color: #366a8c; 
+        }
+
+        select, input[type="date"] {
+            width: 130px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        /* Estilos para a imagem de fundo */
+        body::before {
+            content: '';
+            background-image: url('https://storage.transportemoderno.com.br/uploads/2018/05/TM-486-completa-2-e1525960512161.png');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1; 
+            filter: blur(5px) brightness(0.5); 
+        }
+
+        /* Estilos para os ícones nos cantos */
+        .icon {
+            position: absolute;
+            width: 100px; 
+            height: auto;
+            z-index: 2; 
+        }
+
+        .icon-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .icon-right {
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://files.passeidireto.com/4428c203-1088-45a9-a315-993dbe4d580f/bg1.png" class="icon icon-left" alt="Ícone Esquerdo">
+    <img src="https://files.passeidireto.com/4428c203-1088-45a9-a315-993dbe4d580f/bg1.png" class="icon icon-right" alt="Ícone Direito">
+    
+    <div class="container">
+        <h1>PELOTÃO DE MANUTENÇÃO E TRANSPORTE - SISTEMA DE CONTROLE DE INFORMAÇÕES</h1>
+        
+        <!-- VIATURAS NÃO BLINDADAS -->
+        <div class="section non-armored">
+            <h2>VIATURAS NÃO BLINDADAS</h2>
+            <div class="boxes">
+                <!-- Box 1 -->
+                <div class="box-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=2054010624#gid=2054010624" target="_blank" class="box" id="na-1">Box 1</a>
+                    <label for="mecanico-1">Mecânico:</label>
+                    <select id="mecanico-1">
+                        <option value="SGT DE ARAUJO">SGT DE ARAUJO</option>
+                        <option value="SGT HONJI">SGT HONJI</option>
+                        <option value="CB BETTA">CB BETTA</option>
+                        <option value="CB GRACINO">CB GRACINO</option>
+                        <option value="SD ADRIEL">SD ADRIEL</option>
+                    </select>
+                    <label for="data-entrada-1">Data Entrada:</label>
+                    <input type="date" id="data-entrada-1">
+                    <label for="prev-saida-1">Prev. Saída:</label>
+                    <input type="date" id="prev-saida-1">
+                </div>
+
+                <!-- Box 2 -->
+                <div class="box-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=1920527235#gid=1920527235" target="_blank" class="box" id="na-2">Box 2</a>
+                    <label for="mecanico-2">Mecânico:</label>
+                    <select id="mecanico-2">
+                        <option value="SGT DE ARAUJO">SGT DE ARAUJO</option>
+                        <option value="SGT HONJI">SGT HONJI</option>
+                        <option value="CB BETTA">CB BETTA</option>
+                        <option value="CB GRACINO">CB GRACINO</option>
+                        <option value="SD ADRIEL">SD ADRIEL</option>
+                    </select>
+                    <label for="data-entrada-2">Data Entrada:</label>
+                    <input type="date" id="data-entrada-2">
+                    <label for="prev-saida-2">Prev. Saída:</label>
+                    <input type="date" id="prev-saida-2">
+                </div>
+
+                <!-- Box 3 -->
+                <div class="box-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=1805037802#gid=1805037802" target="_blank" class="box" id="na-3">Box 3</a>
+                    <label for="mecanico-3">Mecânico:</label>
+                    <select id="mecanico-3">
+                        <option value="SGT DE ARAUJO">SGT DE ARAUJO</option>
+                        <option value="SGT HONJI">SGT HONJI</option>
+                        <option value="CB BETTA">CB BETTA</option>
+                        <option value="CB GRACINO">CB GRACINO</option>
+                        <option value="SD ADRIEL">SD ADRIEL</option>
+                    </select>
+                    <label for="data-entrada-3">Data Entrada:</label>
+                    <input type="date" id="data-entrada-3">
+                    <label for="prev-saida-3">Prev. Saída:</label>
+                    <input type="date" id="prev-saida-3">
+                </div>
+            </div>
+        </div>
+
+        <!-- VIATURAS BLINDADAS -->
+        <div class="section armored">
+            <h2>VIATURAS BLINDADAS</h2>
+            <div class="boxes">
+                <!-- Box 1 -->
+                <div class="box-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=1043056047#gid=1043056047" target="_blank" class="box" id="a-1">Box 1</a>
+                    <label for="mecanico-a-1">Mecânico:</label>
+                    <select id="mecanico-a-1">
+                        <option value="SGT DE ARAUJO">SGT DE ARAUJO</option>
+                        <option value="SGT HONJI">SGT HONJI</option>
+                        <option value="CB BETTA">CB BETTA</option>
+                        <option value="CB GRACINO">CB GRACINO</option>
+                        <option value="SD ADRIEL">SD ADRIEL</option>
+                    </select>
+                    <label for="data-entrada-a-1">Data Entrada:</label>
+                    <input type="date" id="data-entrada-a-1">
+                    <label for="prev-saida-a-1">Prev. Saída:</label>
+                    <input type="date" id="prev-saida-a-1">
+                </div>
+
+                <!-- Box 2 -->
+                <div class="box-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=1497698929#gid=1497698929" target="_blank" class="box" id="a-2">Box 2</a>
+                    <label for="mecanico-a-2">Mecânico:</label>
+                    <select id="mecanico-a-2">
+                        <option value="SGT DE ARAUJO">SGT DE ARAUJO</option>
+                        <option value="SGT HONJI">SGT HONJI</option>
+                        <option value="CB BETTA">CB BETTA</option>
+                        <option value="CB GRACINO">CB GRACINO</option>
+                        <option value="SD ADRIEL">SD ADRIEL</option>
+                    </select>
+                    <label for="data-entrada-a-2">Data Entrada:</label>
+                    <input type="date" id="data-entrada-a-2">
+                    <label for="prev-saida-a-2">Prev. Saída:</label>
+                    <input type="date" id="prev-saida-a-2">
+                </div>
+
+                <!-- Box 3 -->
+                <div class="box-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=1877063889#gid=1877063889" target="_blank" class="box" id="a-3">Box 3</a>
+                    <label for="mecanico-a-3">Mecânico:</label>
+                    <select id="mecanico-a-3">
+                        <option value="SGT DE ARAUJO">SGT DE ARAUJO</option>
+                        <option value="SGT HONJI">SGT HONJI</option>
+                        <option value="CB BETTA">CB BETTA</option>
+                        <option value="CB GRACINO">CB GRACINO</option>
+                        <option value="SD ADRIEL">SD ADRIEL</option>
+                    </select>
+                    <label for="data-entrada-a-3">Data Entrada:</label>
+                    <input type="date" id="data-entrada-a-3">
+                    <label for="prev-saida-a-3">Prev. Saída:</label>
+                    <input type="date" id="prev-saida-a-3">
+                </div>
+           <!-- Box 4 -->
+           <div class="box-container">
+            <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=1366796638#gid=1366796638" target="_blank" class="box" id="a-4">Box 4</a>
+            <label for="mecanico-a4">Mecânico:</label>
+            <select id="mecanico-a4">
+                <option value="SGT FERRARI">SGT FERRARI</option>
+                <option value="SGT VANDRÉ">SGT VANDRÉ</option>
+                <option value="SGT THIAGO MENEZES">SGT THIAGO MENEZES</option>
+                <option value="SGT MANICA">SGT MANICA</option>
+                <option value="SGT PEREIRA">SGT PEREIRA</option>
+                <option value="SGT DE LIMA">SGT DE LIMA</option>
+            </select>
+            <label for="data-entrada-a4">Data Entrada:</label>
+            <input type="date" id="data-entrada-a4">
+            <label for="prev-saida-a4">Prev. Saída:</label>
+            <input type="date" id="prev-saida-a4">
+        </div>
+
+        <!-- Box 5 -->
+        <div class="box-container">
+            <a href="https://docs.google.com/spreadsheets/d/1eDvG0IPL2vXFmt6-h1Olbf6tAnBoHJMB4vE6__-PgCY/edit?hl=pt-br&gid=2067942970#gid=2067942970" target="_blank" class="box" id="a-5">Box 5</a>
+            <label for="mecanico-a5">Mecânico:</label>
+            <select id="mecanico-a5">
+                <option value="SGT FERRARI">SGT FERRARI</option>
+                <option value="SGT VANDRÉ">SGT VANDRÉ</option>
+                <option value="SGT THIAGO MENEZES">SGT THIAGO MENEZES</option>
+                <option value="SGT MANICA">SGT MANICA</option>
+                <option value="SGT PEREIRA">SGT PEREIRA</option>
+                <option value="SGT DE LIMA">SGT DE LIMA</option>
+            </select>
+            <label for="data-entrada-a5">Data Entrada:</label>
+            <input type="date" id="data-entrada-a5">
+            <label for="prev-saida-a5">Prev. Saída:</label>
+            <input type="date" id="prev-saida-a5">
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
